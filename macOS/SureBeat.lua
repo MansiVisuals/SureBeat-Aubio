@@ -1,4 +1,4 @@
--- SureBeat by Mansi Visuals:
+-- SureBeat by Mansi Visuals (macOS Version:
 
 -- Define paths to Aubio and FFmpeg binaries
 local aubioonset_path = "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Utility/SureBeat/Aubio/bin/aubioonset"
