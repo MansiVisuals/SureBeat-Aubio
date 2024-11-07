@@ -1,4 +1,4 @@
--- SureBeat by Mansi Visuals:
+-- SureBeat by Mansi Visuals
 
 -- Define paths to Aubio and FFmpeg binaries
 local aubioonset_path = "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Utility/SureBeat/Aubio/bin/aubioonset"
@@ -147,41 +147,41 @@ function main()
     local win = disp:AddWindow({
         ID = "AudioSelector",
         WindowTitle = "SureBeat by Mansi Visuals",
-        Geometry = {100, 100, 800, 550},
+        Geometry = {100, 100, 500, 350},
         ui:VGroup{
             ID = "root",
-            ui:Label{Text = "<b>SureBeat v0.0.2</b>", Alignment = {AlignHCenter = true}, StyleSheet = "font-size: 14px; color: white; padding-bottom: 10px;"},
-            ui:Label{Text = "SureBeat helps you edit to the beat of your audio for sure!", Alignment = {AlignHCenter = true }, StyleSheet = "font-size: 16px; color: white;"},
+            ui:Label{Text = "<b>SureBeat v0.0.2</b>", Alignment = {AlignHCenter = true}, StyleSheet = "font-size: 12px; color: white; padding-bottom: 12px;"},
+            ui:Label{Text = "SureBeat helps you edit to the beat of your audio for sure!", Alignment = {AlignHCenter = true }, StyleSheet = "font-size: 14px; color: white;"},
             ui:HGroup{
-                ui:Label{Text = "Audio File:", MinimumSize = {80, 30}, Alignment = {AlignRight = true}, StyleSheet = "font-size: 14px; color: white;"},
-                ui:LineEdit{ID = "FilePath", Text = "No file selected", ReadOnly = true, MinimumSize = {500, 30}, StyleSheet = "font-size: 14px; color: #555; background-color: #f8f9fa; padding: 10px; border-radius: 5px;"},
-                ui:Button{ID = "Browse", Text = "Browse", MinimumSize = {100, 30}, StyleSheet = "background-color: #DEC091; color: black; font-weight: bold; font-size: 14px; border-radius: 5px;"},
+                ui:Label{Text = "Audio File:", MinimumSize = {40, 15}, Alignment = {AlignRight = true}, StyleSheet = "font-size: 14px; color: white;"},
+                ui:LineEdit{ID = "FilePath", Text = "No file selected", ReadOnly = true, MinimumSize = {75, 15}, StyleSheet = "font-size: 12px; color: #555; background-color: #f8f9fa; padding: 10px; border-radius: 5px;"},
+                ui:Button{ID = "Browse", Text = "Browse", MinimumSize = {30, 12.5}, StyleSheet = "background-color: #DEC091; color: black; font-weight: bold; font-size: 12px; border-radius: 5px;"},
             },
             ui:HGroup{
-                ui:CheckBox{ID = "AddTransients", Text = "Add Transient Markers (Red Markers)", Checked = true, StyleSheet = "color: white; font-size: 14px;"},
-                ui:CheckBox{ID = "AddTempo", Text = "Add Tempo Markers (Cream/White Markers)", Checked = false, StyleSheet = "color: white; font-size: 14px;"},
+                ui:CheckBox{ID = "AddTransients", Text = "Add Transient Markers (Red)", Checked = true, StyleSheet = "color: white; font-size: 12px;"},
+                ui:CheckBox{ID = "AddTempo", Text = "Add Tempo Markers (Cream)", Checked = false, StyleSheet = "color: white; font-size: 12px;"},
             },
             ui:HGroup{
-                ui:Button{ID = "Analyze", Text = "Analyze", MinimumSize = {130, 30}, StyleSheet = "background-color: #DEC091; color: black; font-weight: bold; font-size: 14px; border-radius: 5px;"},
-                ui:Button{ID = "CreateMarkers", Text = "Create Markers", MinimumSize = {130, 30}, StyleSheet = "background-color: #DEC091; color: black; font-weight: bold; font-size: 14px; border-radius: 5px;"},
+                ui:Button{ID = "Analyze", Text = "Analyze", MinimumSize = {30, 20}, StyleSheet = "background-color: #DEC091; color: black; font-weight: bold; font-size: 12px; border-radius: 5px;"},
+                ui:Button{ID = "CreateMarkers", Text = "Create Markers", MinimumSize = {30, 20}, StyleSheet = "background-color: #DEC091; color: black; font-weight: bold; font-size: 12px; border-radius: 5px;"},
             },
             ui:TextEdit{
                 ID = "InfoDisplay",
                 Text = "Status: Awaiting analysis.",
                 ReadOnly = true,
-                MinimumSize = {400, 60},
-                StyleSheet = "color: #333; font-size: 14px; background-color: #f8f9fa; padding: 10px; border-radius: 5px;",
+                MinimumSize = {60, 50},
+                StyleSheet = "color: #333; font-size: 12px; background-color: #f8f9fa; padding: 10px; border-radius: 5px;",
             },
             ui:Label{
-                Text = "Crafted for DaVinci Resolve by Mansi Visuals with the help of ChatGPT",
+                Text = "Crafted for DaVinci Resolve by Mansi Visuals",
                 Alignment = {AlignHCenter = true},
-                StyleSheet = "font-size: 16px; color: white; padding-top: 15px;",
+                StyleSheet = "font-size: 14px; color: white; padding-top: 12px;",
             },
             ui:HGroup{
                 ui:Button{
                     ID = "BuyCoffee", 
                     Text = "Buy Me A Coffee", 
-                    MinimumSize = {130, 25}, 
+                    MinimumSize = {60, 25}, 
                     StyleSheet = "background-color: #DEC091; color: black; font-weight: bold; font-size: 12px; border-radius: 5px;",
                 }
             },
