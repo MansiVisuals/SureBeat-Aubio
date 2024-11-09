@@ -1,5 +1,10 @@
 SureBeat by Mansi Visuals
 
+'''
+Main development has moved away from aubio.
+Follow development at https://github.com/MansiVisuals/SureBeat
+'''
+
 SureBeat is a Lua-based plugin for DaVinci Resolve, designed to help creators sync their videos to audio by detecting transients and adding markers directly on the audio clip. 
 
 By leveraging Aubio for transient and tempo detection, and FFmpeg for audio conversion, SureBeat streamlines beat-syncing workflows for DaVinci Resolve users.
